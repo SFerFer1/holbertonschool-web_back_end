@@ -12,7 +12,7 @@ function handleProfileSignup(firstName, lastName, fileName) {
       }
       return {
         status: 'rejected',
-        reason: new Error(result.reason),
+        reason: new Error(result.reason.message || result.reason),
       };
     }));
 }
