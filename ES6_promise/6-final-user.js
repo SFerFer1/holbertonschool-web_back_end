@@ -10,7 +10,10 @@ function handleProfileSignup(firstName, lastName, fileName) {
       if (result.status === 'fulfilled') {
         return { status: 'fulfilled', value: result.value };
       }
-      return { status: 'rejected', reason: result.reason };
+      return {
+        status: 'rejected',
+        reason: new Error(result.reason),
+      };
     }));
 }
 
