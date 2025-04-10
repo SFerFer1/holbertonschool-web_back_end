@@ -1,4 +1,4 @@
-function getFullResponseFromAPI(isWorking) {
+function getFullResponseFromAPI(works) {
   return new Promise((resolve, reject) => {
     if (works) {
       resolve({
@@ -10,5 +10,6 @@ function getFullResponseFromAPI(isWorking) {
     }
   });
 }
-export default getFullResponseFromAPI;
-  
+
+
+  export default getFullResponseFromAPI;
