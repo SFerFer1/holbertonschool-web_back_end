@@ -3,9 +3,6 @@
 """
 This module provides a simple string operation for concatenation.
 """
-
-
-
 from typing import Iterable, Sequence, List, Tuple
 
 
