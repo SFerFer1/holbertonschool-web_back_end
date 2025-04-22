@@ -12,7 +12,7 @@ spec.loader.exec_module(module)
 import asyncio
 
 async def wait_n(n: int, max_delay: int):
-    tasks = [wait_random(max_delay) for _ in range(n)]
+    tasks = [module.wait_random(max_delay) for _ in range(n)]
 
     delays = []
 
