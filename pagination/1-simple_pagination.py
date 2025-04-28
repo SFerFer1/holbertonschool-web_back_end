@@ -16,4 +16,4 @@ def get_page(page=1, page_size=10):
     assert isinstance(page, int) and page > 0
     assert isinstance(page_size, int) and page_size > 0
 
-    index_range(page, page_size)
+    return index_range(page, page_size)
