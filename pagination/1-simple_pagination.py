@@ -44,7 +44,7 @@ class Server:
         """
         This module provides a simple string operation for concatenation.
         """
-        
+
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
 
