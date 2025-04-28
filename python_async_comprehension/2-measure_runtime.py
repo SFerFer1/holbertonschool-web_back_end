@@ -4,7 +4,7 @@ This module provides a simple string operation for concatenation.
 """
 import time
 import asyncio
-a = __import__('1-async_comprehension').async_comprehension
+async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime() -> float:
@@ -13,8 +13,8 @@ async def measure_runtime() -> float:
     """
     start = time.time()
 
-    tasks = [a() for a in range(4)]
-    
+    tasks = [async_comprehension() for a in range(4)]
+
     await asyncio.gather(*tasks)
 
     end = time.time()
