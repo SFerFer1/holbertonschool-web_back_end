@@ -23,7 +23,7 @@ class Server:
             with open(self.DATA_FILE) as f:
                 reader = csv.reader(f)
                 dataset = [row for row in reader]
-            self.__dataset = dataset[1:]
+            self.__dataset = dataset[1:]  # Skip header row
         return self.__dataset
 
     def indexed_dataset(self) -> Dict[int, List]:
@@ -39,10 +39,10 @@ class Server:
         """
         This module provides a simple string operation for concatenation.
         """
-        assert index is not None and index >= 0
+        assert index is not None and index >= 0, "index must be positive"
 
         indexed_dataset = self.indexed_dataset()
-        assert index < len(indexed_dataset)
+        assert index < len(indexed_dataset), "no acess"
 
         data = []
         current_index = index
