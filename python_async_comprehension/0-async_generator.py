@@ -4,9 +4,10 @@ This module provides a simple string operation for concatenation.
 """
 import random
 import asyncio
+from typing import AsyncGenerator
 
 
-async def async_generator():
+async def async_generator() -> AsyncGenerator[int, None]:
     """
     This module provides a simple string operation for concatenation.
     """
