@@ -3,10 +3,8 @@
 This module provides a simple string operation for concatenation.
 """
 import time
-import importlib
 import asyncio
-a = importlib.import_module('1-async_comprehension').async_comprehension
-
+a = __import__('1-async_comprehension').async_comprehension
 
 async def measure_runtime() -> float:
     """

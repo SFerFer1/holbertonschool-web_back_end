@@ -7,7 +7,7 @@ import importlib
 async_generator = importlib.import_module('0-async_generator').async_generator
 
 
-async def async_comprehension() -> List[int]:
+async def async_comprehension() -> List[float]:
     """
     This module provides a simple string operation for concatenation.
     """
