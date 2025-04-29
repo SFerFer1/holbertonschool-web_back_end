@@ -1,6 +1,3 @@
 // my comment
-result = dbName.school.insertOne({
-    name: "Holberton school"
-});
-
-print("WriteResult({ \"nInserted\" : " + (result.acknowledged ? 1 : 0) + " })");
+db.school.deleteMany({});
+db.school.insertOne({ name: "Holberton school" });
