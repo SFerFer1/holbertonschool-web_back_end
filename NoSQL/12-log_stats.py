@@ -19,5 +19,4 @@ if __name__ == "__main__":
     print(f"\tmethod PATCH: {collection.count_documents({'method': 'PATCH'})}")
     print(f"\tmethod DELETE: {collection.count_documents({'method': 'DELETE'})}")
 
-    status_count = collection.count_documents({"method": "GET", "path": "/status"})
-    print(f"method GET /status: {status_count}")
+    print(f"{collection.count_documents({'method': 'GET', 'path': '/status'})} status check")
