@@ -1,3 +1,4 @@
 // my comment
-db.school.deleteMany({});
-db.school.insertOne({ name: "Holberton school" });
+result = dbName.school.insertOne({
+    name: "Holberton school"
+});
