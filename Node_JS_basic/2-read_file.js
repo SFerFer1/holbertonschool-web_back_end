@@ -5,7 +5,8 @@ function countStudents(path) {
     const data = fs.readFileSync(path, 'utf-8').trim();
 
     const lineas = data.split('\n').filter((lineas) => lineas.trim() !== '');
-
+    lineas.shift();
+    
     const StudentsByField = {};
     let AllStudents = 0;
 
