@@ -5,14 +5,15 @@ const interfaz = readline.createInterface({
   output: process.stdout,
 });
 
-const a = 'Welcome to Holberton School, what is your name?\n';
-
-interfaz.question(a, (answer) => {
-  console.log(`Your name is: ${answer}`);
-  interfaz.close();
-});
-
 process.on('SIGINT', () => {
   console.log('\nThis important software is now closing');
   process.exit();
+});
+
+console.log('Welcome to Holberton School, what is your name?');
+
+interfaz.on('line', (input) => {
+  console.log(`Your name is: ${input}`);
+  console.log('This important software is now closing');
+  
 });
