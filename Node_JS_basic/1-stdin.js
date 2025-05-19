@@ -13,5 +13,8 @@ interfaz.on('line', (input) => {
 });
 
 interfaz.on('close', () => {
-  console.log('This important software is now closing');
+
+  if (!process.stdin.isTTY) {
+    console.log('This important software is now closing');
+  }
 });
