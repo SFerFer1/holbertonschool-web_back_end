@@ -1,4 +1,5 @@
-const countStudents = require('./2-read_file');  // Asegúrate de que el nombre del archivo sea correcto
+const countStudents = require('./3-read_file_async');
 
-// Llama a la función countStudents pasando el archivo CSV como argumento
-countStudents('database.csv');
+countStudents('database.csv')
+  .then(() => console.log('Done'))
+  .catch((err) => console.error(err.message));
