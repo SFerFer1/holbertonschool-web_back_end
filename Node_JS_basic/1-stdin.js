@@ -13,5 +13,5 @@ interfaz.on('line', (input) => {
 });
 
 interfaz.on('close', () => {
-  console.log('This important software is now closing');
+  console.log('\nThis important software is now closing');
 });
