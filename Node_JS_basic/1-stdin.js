@@ -5,13 +5,13 @@ const interfaz = readline.createInterface({
   output: process.stdout,
 });
 
-console.log('Welcome to Holberton School, what is your name?');
+console.log('Welcome to Holberton School, what is your name?\n');
 
 interfaz.on('line', (input) => {
-  process.stdout.write(`Your name is: ${input.trim()}\r`);
+  process.stdout.write(`Your name is: ${input.trim()}`);
   setTimeout(() => {
 
-    console.log('\nThis important software is now closing');
+    console.log('\nThis important software is now closing\n');
     interfaz.close();
   }, 0);
 });
