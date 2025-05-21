@@ -8,7 +8,7 @@ const interfaz = readline.createInterface({
 console.log('Welcome to Holberton School, what is your name?');
 
 interfaz.on('line', (input) => {
-  process.stdout.write(`Your name is: ${input.trim()}\r`);
+  process.stdout.write(`Your name is: ${input.trim()}\n`);
   interfaz.close();
 });
 
