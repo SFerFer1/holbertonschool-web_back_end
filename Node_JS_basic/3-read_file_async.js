@@ -22,9 +22,12 @@ async function countStudents(path) {
     });
 
     console.log(`Number of students: ${AllStudents}`);
+    let result = `Number of students: ${AllStudents}`;
     Object.entries(StudentsByField).forEach(([field, list]) => {
       console.log(`Number of students in ${field}: ${list.length}. List: ${list.join(', ')}`);
+      result += `\nNumber of students in ${field}: ${list.length}. List: ${list.join(', ')}`;
     });
+    return result;
   } catch (error) {
     throw new Error('Cannot load the database');
   }

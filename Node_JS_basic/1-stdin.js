@@ -1,9 +1,11 @@
 const readline = require('readline');
 
+
 const interfaz = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
+
 
 console.log('Welcome to Holberton School, what is your name?');
 
@@ -12,9 +14,7 @@ interfaz.on('line', (input) => {
   interfaz.close();
 });
 
-interfaz.on('close', () => {
 
-  if (!process.stdin.isTTY) {
-    console.log('This important software is now closing');
-  }
+interfaz.on('close', () => {
+  console.log('This important software is now closing');
 });
