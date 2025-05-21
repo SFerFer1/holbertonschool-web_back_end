@@ -1,17 +1,13 @@
-const express = require('express');
+
+import express from 'express';
+import AppController from '../controllers/AppController';
+import StudentsController from '../controllers/StudentsController';
+
 const router = express.Router();
 
-
-const AppController = require('../controllers/AppController');
-const StudentsController = require('../controllers/StudentsController');
-
-
-router.get('/', AppController.home);
-
+router.get('/', AppController.getHomepage);
 
 router.get('/students', StudentsController.getAllStudents);
+router.get('/students/:major', StudentsController.getAllStudentsByMajor);
 
-
-router.get('/students/:major', StudentsController.getStudentsByMajor);
-
-module.exports = router;
+export default router;
